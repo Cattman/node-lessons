@@ -1,3 +1,6 @@
-.big {
-    color:aqua
+#app {
+    display: flexbox;
+}
+#menu {
+    background-color: darkolivegreen;
 }

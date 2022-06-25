@@ -1,4 +1,4 @@
-
+"use strict";
 const appDiv = "app";
 
 let routes = {};
@@ -22,16 +22,36 @@ let route = (path, template) => {
     }
 };
 
-template('menu', () => {
-    let myDiv = document.getElementById(appDiv);
-    myDiv.innerHTML = "app/";
-    const link1 = createLink('view1', 'Go to view1', '#/view1');
-    const link2 = createLink('view2', 'Go to view2', '#/view2');
-    myDiv.appendChild(link1);
-    return myDiv.appendChild(link2);
+template('app', () => {
+    let myDiv = document.getElementById('app');
+    //myDiv.innerHTML = "app/";
+    let links = [3];
+    links[0] = createLink('home', 'Menu1', './home/home.html');
+    links[1] = createLink('page2', 'Menu2', './page2/page2.html');
+    for (let index = 0; index < links.length; index++) {
+      myDiv.
+      myDiv.appendChild(links[index]);
+    }
+    return myDiv;
 });
 
-route('/', 'template1');
+//Helper function to creat a navbar
+let createNav = (navJsonFile, ) => {
+
+}
+
+// Helper function to create a link.
+let createLink = (title, text, href) => {
+  let a = document.createElement('a');
+  let linkText = document.createTextNode(text);
+  a.appendChild(linkText);
+  a.title = title;
+  a.href = href;
+  return a;
+};
+
+route()
+route('/', 'app');
 
 // Give the correspondent route (template) or fail
 let resolveRoute = (route) => {
