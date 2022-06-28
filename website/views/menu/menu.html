@@ -1,17 +1,19 @@
+<link rel="stylesheet" href="./menu.css">
+<script src="./menu.js"></script>
 <nav class="navbar">
     <!-- LOGO -->
     <div class="logo">MUO</div>
     <!-- NAVIGATION MENU -->
     <ul class="nav-links">
       <!-- USING CHECKBOX HACK -->
-      <input type="checkbox" id="checkbox_toggle" />
+      <input type="checkbox" id="checkbox_toggle" onclick="ToggleMenuOrientation(this)"/>
       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
       <!-- NAVIGATION MENUS -->
       <div class="menu">
-        <li><a href="/">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="/">About</a></li>
         <li class="services">
-          <a href="/">Services</a>
+          <a onclick="Dropdown()">Services</a>
           <!-- DROPDOWN MENU -->
           <ul class="dropdown">
             <li><a href="/">Dropdown 1 </a></li>
@@ -22,7 +24,8 @@
           </ul>
         </li>
         <li><a href="/">Pricing</a></li>
-        <li><a href="/">Contact</a></li>
+        <li><a href="/">Contact</a></li>        
       </div>
+      <input type="search" placeholder="Search WIP" onchange="searchSite(this)"/>
     </ul>
 </nav>
