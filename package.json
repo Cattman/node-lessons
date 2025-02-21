@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "heroku": "^7.60.2"
+    "heroku": "^10.2.0",
+    "http-status-codes": "^2.3.0"
   }
 }

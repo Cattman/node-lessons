@@ -25,7 +25,6 @@ let route = (path, template) => {
 };
 
 template('app', () => {
-<<<<<<< Updated upstream
   let myDiv = document.getElementById('app');
   //myDiv.innerHTML = "app/";
   let links = [3];
@@ -47,25 +46,6 @@ template('nav', () => {
 let createNav = () => {
 
 }
-=======
-    let myDiv = document.getElementById(appDiv);
-    //myDiv.innerHTML = "app/";
-    let links = [3];
-    links[0] = createLink('home', 'Menu1', './home/home.html');
-    links[1] = createLink('page2', 'Menu2', './page2/page2.html');
-    for (let index = 0; index < links.length; index++) {
-      myDiv.appendChild(links[index]);
-    }
-    return myDiv;
-});
-
-//Helper function to creat a navbar
-template('nav', () => {
-  let navDiv = document.getElementById(navDiv);
-  navDiv.innerHTML = './nav-menu/nav-menu.html';
-  return navDiv;
-});
->>>>>>> Stashed changes
 
 // Helper function to create a link.
 let createLink = (title, text, href) => {
